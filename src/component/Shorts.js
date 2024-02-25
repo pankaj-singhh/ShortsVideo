@@ -7,16 +7,22 @@ import { useState } from "react";
 const Shorts = () => {
   const [shortIndex, setShortIndex] = useState(0);
   const scrollUp = () => {
-    window.scrollByPages(-1);
-    setShortIndex(shortIndex - 1);
+    if (shortIndex > 0) {
+      const distanceToScroll = window.innerHeight;
+      window.scrollBy(0, -distanceToScroll);
+      setShortIndex(shortIndex - 1);
+    }
   };
 
   const scrollDown = () => {
-    setShortIndex(shortIndex + 1);
-    window.scrollByPages(1);
-    if (shortIndex > dummyData.length) {
+    if (shortIndex < dummyData.length - 1) {
+      const distanceToScroll = window.innerHeight;
+      window.scrollBy(0, distanceToScroll);
+      setShortIndex(shortIndex + 1);
+    } else {
       window.scrollTo({
         top: 0,
+        behavior: "smooth",
       });
       setShortIndex(0);
     }
