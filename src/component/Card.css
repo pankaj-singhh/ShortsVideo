@@ -1,0 +1,74 @@
+
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Set maximum width as per your design */
+  margin: auto; /* Center the content horizontally */
+}
+.mindiv {
+  display: flex;
+}
+.video {
+  width: auto;
+  height: 90vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  color: white; /* Text color on top of the video */
+}
+
+.play,
+.pause {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 85vh;
+  margin-right: 85%;
+  font-size: 20px;
+}
+.manage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 90%;
+}
+
+.title,
+.description {
+  margin: 0;
+  text-align: center;
+  /* max-width: 60%; /* Adjust max width of text as needed */
+  height: 5%;
+}
+.description {
+  padding-right: 45%; /* Add padding for better readability */
+  /* padding-top: 20%; */
+}
+.title {
+  padding-right: 85%; /* Add padding for better readability */
+  padding-top: 60%;
+}
+
+.btn {
+  display: block;
+  margin-top: 40%;
+  cursor: pointer;
+  padding-top: 20%;
+}
+button {
+  border-radius: 80%;
+  font-size: large;
+}
+@media screen and(min-width:400px) {
+}

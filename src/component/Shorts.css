@@ -1,0 +1,34 @@
+.shorts {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
+.swipe {
+  margin-top: 90px;
+  display: block;
+  position: absolute;
+}
+
+.swipe-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  right: 0;
+}
+
+.up {
+  margin-top: 42%;
+  margin-left: 96%;
+}
+.down {
+  margin-top: 4vh;
+  margin-left: 96%;
+}
+button {
+  cursor: pointer;
+}
+button.icon {
+  font-size: 30px;
+}
